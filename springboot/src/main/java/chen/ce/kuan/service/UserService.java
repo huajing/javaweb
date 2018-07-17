@@ -10,4 +10,5 @@ import chen.ce.kuan.domain.User;
  */
 public interface UserService {
     public void save(User user);
+    public void getUser(int userId);
 }

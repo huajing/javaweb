@@ -32,4 +32,5 @@ public class JpaTest {
         userRepository.save(new User("huajing-Repository"));
         userService.save(new User("huajing-from-userService"));
     }
+
 }

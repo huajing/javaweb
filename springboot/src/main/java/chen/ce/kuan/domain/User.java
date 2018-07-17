@@ -1,6 +1,8 @@
 package chen.ce.kuan.domain;
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,6 +13,7 @@ import java.io.Serializable;
  * @Created on 2018/7/16 chenck
  */
 @Entity
+@Data
 @Table(name = "my_user")
 public class User implements Serializable{
     @Id
