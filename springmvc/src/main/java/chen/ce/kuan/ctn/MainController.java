@@ -16,7 +16,7 @@ public class MainController {
     @RequestMapping("home")
     public @ResponseBody
     String homePage(){
-        return "This  is home page";
+        return "This  is home page=hjj";
     }
     @RequestMapping("login")
     public String indexPage(){
