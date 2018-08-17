@@ -4,7 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+    </parent>
+
+    <groupId>chen.ce.kuan</groupId>
     <artifactId>javaweb</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -12,7 +18,6 @@
         <module>springboot</module>
         <module>springmvc</module>
         <module>j2ee</module>
-        <module>spring-cloud-eureka-server</module>
     </modules>
 
 </project>
