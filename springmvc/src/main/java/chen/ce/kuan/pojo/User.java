@@ -9,5 +9,5 @@ import java.io.Serializable;
  * @Created on 2018/7/16 chenck
  */
 
-public class User implements Serializable{
+public class User implements Serializable{z
 }

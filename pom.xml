@@ -19,8 +19,6 @@
         <module>springmvc</module>
         <module>j2ee</module>
         <module>dubbo-api</module>
-        <module>dubbo-consumer</module>
-        <module>dubbo-consumer</module>
     </modules>
 
 </project>
