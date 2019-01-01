@@ -1,8 +1,12 @@
 package chen.ce.kuan.ctn;
 
+import chen.ce.kuan.service.IUserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
 
 /**
  * @Title chen.ce.kuan.ctn
@@ -13,10 +17,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/")
 public class MainController {
+    @Resource
+    private IUserService userService;
+
     @RequestMapping("home")
     public @ResponseBody
     String homePage(){
-        return "This  is home page=hjj";
+        String test = userService.sayHello("test");
+        return "This  is home page=hjj " + test;
     }
     @RequestMapping("login")
     public String indexPage(){
