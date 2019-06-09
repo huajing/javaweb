@@ -5,6 +5,7 @@
    
 
 ## springmvc
+纯净的java springmvc项目的结构
 
 ## springboot
 
