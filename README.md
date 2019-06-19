@@ -8,5 +8,6 @@
 纯净的java springmvc项目的结构
 
 ## springboot
+注意在统一的版本下进行学习，否则可能会有jar冲突
 
 ## springcloud

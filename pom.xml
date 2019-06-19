@@ -20,6 +20,8 @@
         <module>j2ee</module>
         <module>dubbo-api</module>
         <module>dubbo-consumer</module>
+        <module>springboot-eureka-server</module>
+        <module>springboot-eureka-client</module>
     </modules>
 
 </project>
