@@ -20,7 +20,6 @@
         <module>j2ee</module>
         <module>dubbo-api</module>
         <module>dubbo-consumer</module>
-        <module>firstweb</module>
     </modules>
 
 </project>
