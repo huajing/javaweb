@@ -1,5 +1,6 @@
 package chen.ce.kuan.ctn;
 
+import chen.ce.kuan.domain.User;
 import chen.ce.kuan.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ public class MainController {
 
     @RequestMapping("home")
     public String homePage(){
+//        userService.save(new User("abc"));
         return "This  is home page---from spring boot";
     }
     @RequestMapping("login")
