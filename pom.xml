@@ -22,6 +22,7 @@
         <module>dubbo-consumer</module>
         <module>springboot-eureka-server</module>
         <module>springboot-eureka-client</module>
+        <module>spring-enruka</module>
     </modules>
 
 </project>

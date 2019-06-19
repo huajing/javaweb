@@ -3,16 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>javaweb</artifactId>
+        <artifactId>spring-enruka</artifactId>
         <groupId>chen.ce.kuan</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>chen.ce.kuan</groupId>
-    <artifactId>springboot-eureka-server</artifactId>
-
+    <artifactId>consume</artifactId>
 
     <dependencies>
         <dependency>
@@ -22,8 +20,15 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
             <version>1.3.5.RELEASE</version><!--与springboot2.0的版本冲突-->
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <version>1.3.5.RELEASE</version>
+        </dependency>
     </dependencies>
+
 </project>

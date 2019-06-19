@@ -1,19 +1,19 @@
-package chen.ce.kuan.enruka.server;
+package c.c.k;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * @Title chen.ce.kuan.enruka.server
+ * @Title c.c.k
  * @Copyright: Copyright 2019
  * @Description: java <br/>
  * @Created on 2019/6/19 chenck
  */
-@EnableEurekaServer
+@EnableDiscoveryClient
 @SpringBootApplication
-public class EnrukaServerApplication {
+public class ProduceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EnrukaServerApplication.class, args);
+        SpringApplication.run(ProduceApplication.class, args);
     }
 }

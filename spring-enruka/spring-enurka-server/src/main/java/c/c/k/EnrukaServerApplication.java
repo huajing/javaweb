@@ -2,7 +2,7 @@ package c.c.k;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @Title c.c.k
@@ -10,11 +10,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Description: java <br/>
  * @Created on 2019/6/19 chenck
  */
-@EnableDiscoveryClient
 @SpringBootApplication
-public class EnrukaClientApplication {
+@EnableEurekaServer
+public class EnrukaServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EnrukaClientApplication.class, args);
-
+        SpringApplication.run(EnrukaServerApplication.class, args);
     }
 }
