@@ -23,6 +23,7 @@
         <module>springboot-eureka-server</module>
         <module>springboot-eureka-client</module>
         <module>spring-enruka</module>
+        <module>spring-config</module>
     </modules>
 
 </project>
