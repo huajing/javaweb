@@ -22,6 +22,7 @@
         <module>dubbo-consumer</module>
         <module>spring-enruka</module>
         <module>spring-config</module>
+        <module>spring-templates</module>
     </modules>
 
 </project>
