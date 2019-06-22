@@ -23,6 +23,7 @@
         <module>spring-enruka</module>
         <module>spring-config</module>
         <module>spring-templates</module>
+        <module>spring-orm</module>
     </modules>
 
 </project>
