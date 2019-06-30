@@ -1,8 +1,9 @@
 ![Image text](https://github.com/huajing/resources/blob/master/mysql/20190630_1.png)
-1）、id列数字越大越先执行，如果说数字一样大，那么就从上往下依次执行，id列为null的就表是这是一个结果集，不需要使用它来进行查询。
+## id说明
+列数字越大越先执行，如果说数字一样大，那么就从上往下依次执行，id列为null的就表是这是一个结果集，不需要使用它来进行查询。
 关键词： explain key_len
 
-2、select_type列常见的有：
+## 2、select_type列常见的有：
 
 A：simple：表示不需要union操作或者不包含子查询的简单select查询。有连接查询时，外层的查询为simple，且只有一个  
 B：primary：一个需要union操作或者含有子查询的select，位于最外层的单位查询的select_type即为primary。且只有一个  
@@ -13,10 +14,10 @@ F：subquery：除了from字句中包含的子查询外，其他地方出现的�
 G：dependent subquery：与dependent union类似，表示这个subquery的查询要受到外部表查询的影响  
 H：derived：from字句中出现的子查询，也叫做派生表，其他数据库中可能叫做内联视图或嵌套select  
 
-3、table
+## 3、table
 显示的查询表名，如果查询使用了别名，那么这里显示的是别名，如果不涉及对数据表的操作，那么这显示为null，如果显示为尖括号括起来的就表示这个是临时表，后边的N就是执行计划中的id，表示结果来自于这个查询产生。如果是尖括号括起来的，与类似，也是一个临时表，表示这个结果来自于union查询的id为M,N的结果集。
 
-4、type
+## 4、type
 依次从好到差：system，const，eq_ref，ref，fulltext，ref_or_null，unique_subquery，index_subquery，range，index_merge，index，ALL，除了all之外，其他的type都可以使用到索引，除了index_merge之外，其他的type只可以用到一个索引
 
 A：system：表中只有一行数据或者是空表，且只能用于myisam和memory表。如果是Innodb引擎表，type列在这个情况通常都是all或者index  
@@ -32,13 +33,13 @@ J：index_merge：表示查询使用了两个以上的索引，最后取交集�
 K：index：索引全表扫描，把索引从头到尾扫一遍，常见于使用索引列就可以处理不需要读取数据文件的查询、可以使用索引排序或者分组的查询。  
 L：all：这个就是全表扫描数据文件，然后再在server层进行过滤返回符合要求的记录。  
 
-5、possible_keys
+## 5、possible_keys
 查询可能使用到的索引都会在这里列出来
 
-6、key
+## 6、key
 查询真正使用到的索引，select_type为index_merge时，这里可能出现两个以上的索引，其他的select_type这里只会出现一个。
 
-7、key_len
+## 7、key_len
 用于处理查询的索引长度，如果是单列索引，那就整个索引长度算进去，如果是多列索引，那么查询不一定都能使用到所有的列，具体使用到了多少个列的索引，这里就会计算进去，没有使用到的列，这里不会计算进去。留意下这个列的值，算一下你的多列索引总长度就知道有没有使用到所有的列了。要注意，mysql的ICP特性使用到的索引不会计入其中。
 另外，key_len只计算where条件用到的索引长度，而排序和分组就算用到了索引，也不会计算到key_len中。
 如何计算key_len：
@@ -47,15 +48,15 @@ https://yq.aliyun.com/articles/61062?spm=5176.10695662.1996646101.searchclickres
 ![Image text](https://github.com/huajing/resources/blob/master/mysql/20190630_2.png)
 什么是ICP？
 https://yq.aliyun.com/articles/259696?spm=a2c4e.11163080.searchblog.15.52fe43a8Id5hXS
-8、ref
+8## 、ref
 
 如果是使用的常数等值查询，这里会显示const，如果是连接查询，被驱动表的执行计划这里会显示驱动表的关联字段，如果是条件使用了表达式或者函数，或者条件列发生了内部隐式转换，这里可能显示为func
 
-9、rows
+## 9、rows
 
 这里是执行计划中估算的扫描行数，不是精确值
 
-10、extra
+## 10、extra
 
 这个列可以显示的信息非常多，有几十种，常用的有
 A：distinct：在select部分使用了distinc关键字  
