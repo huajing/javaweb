@@ -13,8 +13,8 @@
     <artifactId>spring-orm</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>hibernate</module>
-        <module>mybatis</module>
+        <module>spring-orm-hibernate</module>
+        <module>spring-orm-mybatis</module>
     </modules>
 
 

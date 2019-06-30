@@ -13,7 +13,7 @@
     <artifactId>spring-templates</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>thymeleaf</module>
+        <module>spring-templates-thymeleaf</module>
     </modules>
 
 </project>

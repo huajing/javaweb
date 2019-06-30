@@ -14,9 +14,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>produce</module>
-        <module>consume</module>
-        <module>server</module>
+        <module>spring-enruka-produce</module>
+        <module>spring-enruka-consume</module>
+        <module>spring-enruka-server</module>
     </modules>
 
 </project>
