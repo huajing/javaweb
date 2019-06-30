@@ -9,13 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>chen.ce.kuan</groupId>
-    <artifactId>spring-orm</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>base-web-project</artifactId>
+
     <modules>
-        <module>hibernate</module>
-        <module>mybatis</module>
+        <module>j2ee</module>
+        <module>springboot</module>
+        <module>springmvc</module>
     </modules>
-
-
 </project>

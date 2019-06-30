@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>chen.ce.kuan</groupId>
-    <artifactId>spring-enruka</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring-enurka-server</module>
-        <module>produce</module>
-        <module>consume</module>
-    </modules>
+    <artifactId>spring-cloud</artifactId>
+
 
 </project>

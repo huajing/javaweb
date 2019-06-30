@@ -15,14 +15,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>springboot</module>
-        <module>springmvc</module>
-        <module>j2ee</module>
-        <module>spring-enruka</module>
-        <module>spring-config</module>
-        <module>spring-templates</module>
-        <module>spring-orm</module>
         <module>dubbo</module>
+        <module>base-web-project</module>
+        <module>spring-cloud</module>
     </modules>
 
 </project>
