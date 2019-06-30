@@ -68,11 +68,11 @@ https://yq.aliyun.com/articles/259696?spm=a2c4e.11163080.searchblog.15.52fe43a8I
 这个列可以显示的信息非常多，有几十种，常用的有
 A：distinct：在select部分使用了distinc关键字  
 B：no tables used：不带from字句的查询或者From dual查询  
-C：使用not in()形式子查询或not exists运算符的连接查询，这种叫做反连接。即，一般连接查询是先查询内表，再查询外表，反连接就是先查询外表，再查询内表。  
+C：使用not in()形式子查询或not exists运算符的连接查询，这种叫做反连接。即，一般连接查询是先查询内表，再查询外表，反连接就是先查询外表，再查询内表。    
 D：using filesort：排序时无法使用到索引时，就会出现这个。常见于order by和group by语句中  
 E：using index：查询时不需要回表查询，直接通过索引就可以获取查询的数据。  
-F：using join buffer（block nested loop），using join buffer（batched key accss）：5.6.x之后的版本优化关联查询的BNL，BKA特性。主要是减少内表的循环数量以及比较顺序地扫描查询。
-G：using sort_union，using_union，using intersect，using sort_intersection：  
+F：using join buffer（block nested loop），using join buffer（batched key accss）：5.6.x之后的版本优化关联查询的BNL，BKA特性。主要是减少内表的循环数量以及比较顺序地扫描查询。  
+G：using sort_union，using_union，using intersect，using sort_intersection：    
 using intersect：表示使用and的各个索引的条件时，该信息表示是从处理结果获取交集  
 using union：表示使用or连接各个使用索引的条件时，该信息表示从处理结果获取并集  
 using sort_union和using sort_intersection：与前面两个对应的类似，只是他们是出现在用and和or查询信息量大时，先查询主键，然后进行排序合并后，才能读取记录并返回。
@@ -81,5 +81,4 @@ I：using where：表示存储引擎返回的记录并不是所有的都满足�
 J：firstmatch(tb_name)：5.6.x开始引入的优化子查询的新特性之一，常见于where字句含有in()类型的子查询。如果内表的数据量比较大，就可能出现这个  
 K：loosescan(m..n)：5.6.x之后引入的优化子查询的新特性之一，在in()类型的子查询中，子查询返回的可能有重复记录时，就可能出现这个  
 除了这些之外，还有很多查询数据字典库，执行计划过程中就发现不可能存在结果的一些提示信息  
-11、filtered  
-使用explain extended时会出现这个列，5.7之后的版本默认就有这个字段，不需要使用explain extended了。这个字段表示存储引擎返回的数据在server层过滤后，剩下多少满足查询的记录数量的比例，注意是百分比，不是具体记录数。  
+11、filtered  使用explain extended时会出现这个列，5.7之后的版本默认就有这个字段，不需要使用explain extended了。这个字段表示存储引擎返回的数据在server层过滤后，剩下多少满足查询的记录数量的比例，注意是百分比，不是具体记录数。  
