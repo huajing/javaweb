@@ -1,5 +1,5 @@
 ![Image text](https://github.com/huajing/resources/blob/master/mysql/20190630_1.png)
-## id说明
+## 1、id说明
 列数字越大越先执行，如果说数字一样大，那么就从上往下依次执行，id列为null的就表是这是一个结果集，不需要使用它来进行查询。
 关键词： explain key_len
 
