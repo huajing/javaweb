@@ -48,8 +48,8 @@ https://yq.aliyun.com/articles/61062?spm=5176.10695662.1996646101.searchclickres
 ![Image text](https://github.com/huajing/resources/blob/master/mysql/20190630_2.png)
 什么是ICP？
 https://yq.aliyun.com/articles/259696?spm=a2c4e.11163080.searchblog.15.52fe43a8Id5hXS
-8## 、ref
 
+## 8 、ref
 如果是使用的常数等值查询，这里会显示const，如果是连接查询，被驱动表的执行计划这里会显示驱动表的关联字段，如果是条件使用了表达式或者函数，或者条件列发生了内部隐式转换，这里可能显示为func
 
 ## 9、rows
