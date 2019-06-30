@@ -1,4 +1,4 @@
-
+![Image text](https://github.com/huajing/resources/blob/master/mysql/20190630_1.png)
 1）、id列数字越大越先执行，如果说数字一样大，那么就从上往下依次执行，id列为null的就表是这是一个结果集，不需要使用它来进行查询。
 关键词： explain key_len
 
@@ -52,6 +52,7 @@ L：all：这个就是全表扫描数据文件，然后再在server层进行过�
 如何计算key_len：
 https://yq.aliyun.com/articles/61062?spm=5176.10695662.1996646101.searchclickresult.1b1a67484kwWzz
 
+![Image text](https://github.com/huajing/resources/blob/master/mysql/20190630_2.png)
 什么是ICP？
 https://yq.aliyun.com/articles/259696?spm=a2c4e.11163080.searchblog.15.52fe43a8Id5hXS
 8、ref
