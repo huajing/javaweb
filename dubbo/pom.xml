@@ -14,8 +14,8 @@
 
     <modules>
         <module>dubbo-api</module>
-        <module>dubbo-consumer</module>
-        <module>dubbo-producer</module>
+        <module>dubbo-springboot</module>
+        <module>dubbo-xml</module>
     </modules>
 
     <dependencies>

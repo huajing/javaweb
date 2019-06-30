@@ -9,11 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubbo-producer</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>dubbo-xml</artifactId>
     <modules>
+        <module>dubbo-consumer</module>
+        <module>dubbo-producer</module>
     </modules>
 
-    <dependencies>
-    </dependencies>
 </project>
