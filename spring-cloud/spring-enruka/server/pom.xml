@@ -9,10 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>chen.ce.kuan</groupId>
-    <artifactId>spring-enurka-server</artifactId>
-    <packaging>jar</packaging>
-
+    <artifactId>server</artifactId>
 
     <dependencies>
         <dependency>
@@ -26,4 +23,5 @@
             <version>2.0.1.RELEASE</version>
         </dependency>
     </dependencies>
+
 </project>

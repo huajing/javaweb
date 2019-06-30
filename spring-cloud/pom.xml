@@ -11,5 +11,10 @@
 
     <artifactId>spring-cloud</artifactId>
 
-
+    <modules>
+        <module>spring-enruka</module>
+        <module>spring-config</module>
+        <module>spring-orm</module>
+        <module>spring-templates</module>
+    </modules>
 </project>
