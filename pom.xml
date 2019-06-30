@@ -18,12 +18,11 @@
         <module>springboot</module>
         <module>springmvc</module>
         <module>j2ee</module>
-        <module>dubbo-api</module>
-        <module>dubbo-consumer</module>
         <module>spring-enruka</module>
         <module>spring-config</module>
         <module>spring-templates</module>
         <module>spring-orm</module>
+        <module>dubbo</module>
     </modules>
 
 </project>
