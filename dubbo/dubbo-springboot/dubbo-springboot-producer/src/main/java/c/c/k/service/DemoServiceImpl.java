@@ -1,8 +1,11 @@
 package c.c.k.service;
 
-import chen.ce.kuan.api.DemoService;
-import com.alibaba.dubbo.config.annotation.Service;
 
+import c.c.k.api.DemoService;
+import com.alibaba.dubbo.config.annotation.Service;
+import org.springframework.stereotype.Component;
+
+@Component
 @Service
 public class DemoServiceImpl implements DemoService {
     @Override

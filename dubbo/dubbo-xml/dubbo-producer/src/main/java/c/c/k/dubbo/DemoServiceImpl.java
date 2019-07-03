@@ -1,6 +1,6 @@
 package c.c.k.dubbo;
 
-import chen.ce.kuan.api.DemoService;
+import c.c.k.api.DemoService;
 
 public class DemoServiceImpl implements DemoService {
     @Override

@@ -1,6 +1,6 @@
 package chen.ce.kuan;
 
-import chen.ce.kuan.api.DemoService;
+import c.c.k.api.DemoService;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class Consumer {

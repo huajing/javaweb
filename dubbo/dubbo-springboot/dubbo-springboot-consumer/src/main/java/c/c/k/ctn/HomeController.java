@@ -1,6 +1,6 @@
 package c.c.k.ctn;
 
-import chen.ce.kuan.api.DemoService;
+import c.c.k.api.DemoService;
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
