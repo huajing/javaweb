@@ -1,5 +1,6 @@
 package c.c.k.rest;
 
+import c.c.k.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +21,8 @@ public class UserController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getUser(){
-        userDao.getUser();
-        return "";
+        User user = userDao.getUser();
+        System.out.println(user.getName());
+        return user.toString();
     }
 }

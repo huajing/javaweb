@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- mapper 为根元素节点， 一个namespace对应一个dao -->
-<mapper namespace="c.c.k.entity.User">
+<mapper namespace="c.c.k.dao.UserDao">
     <resultMap id="BaseResultMap" type="c.c.k.entity.User">
         <result column="id" property="id" />
         <result column="name" property="name" />
@@ -17,6 +17,6 @@
     <select id="getUser" resultMap="BaseResultMap" >
         select
         id, name
-        from user
+        from my_user where id=1
     </select>
 </mapper>
