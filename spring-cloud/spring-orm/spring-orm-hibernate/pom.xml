@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>chen.ce.kuan</groupId>
-    <artifactId>hibernate</artifactId>
+    <artifactId>spring-orm-hibernate</artifactId>
 
     <dependencies>
         <dependency>

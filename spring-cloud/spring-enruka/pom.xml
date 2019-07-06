@@ -18,7 +18,7 @@
         <module>spring-enruka-produce</module>
         <module>spring-enruka-consume</module>
         <module>spring-enruka-server</module>
-        <module>feign-consumer</module>
+        <!--<module>feign-consumer</module>-->
 
     </modules>
 
