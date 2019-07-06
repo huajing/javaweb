@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlRegistry;
  * @Description: java <br/>
  * @Created on 2019/6/22 chenck
  */
-@Repository
+//@Repository
 public interface UserDao {
     User getUser();
 }

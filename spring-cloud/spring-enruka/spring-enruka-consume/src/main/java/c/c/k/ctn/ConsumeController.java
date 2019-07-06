@@ -1,10 +1,13 @@
-package c.c.k;
+package c.c.k.ctn;
 
+import c.c.k.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.Resource;
 
 /**
  * @Title c.c.k
@@ -14,11 +17,11 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class ConsumeController {
-    @Autowired
-    RestTemplate restTemplate;
+    @Resource
+    private HelloService helloService;
 
     @RequestMapping(value = "consume-hello", method = RequestMethod.GET)
     public String helloConsume(){
-        return restTemplate.getForEntity("http://produce-service:4441/hello", String.class).getBody();
+        return helloService.sayHell("consume-hello");
     }
 }

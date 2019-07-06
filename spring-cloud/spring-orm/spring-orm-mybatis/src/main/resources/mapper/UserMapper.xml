@@ -17,6 +17,6 @@
     <select id="getUser" resultMap="BaseResultMap" >
         select
         id, name
-        from my_user where id=1
+        from user where id=1
     </select>
 </mapper>

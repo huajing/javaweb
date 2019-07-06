@@ -25,6 +25,7 @@ public class ProduceController {
 
 //        ServiceInstance localServiceInstance = discoveryClient.getLocalServiceInstance();
 
+//        discoveryClient.getServices()
         return "Produce-hello";
     }
 }
