@@ -29,6 +29,7 @@ com_crashlytics_export_strings.xml
 # Package Files #
 *.war
 *.ear
+*.jar
 .settings/
 .classpath
 .project
