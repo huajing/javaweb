@@ -1,5 +1,5 @@
 package c.c.k.api;
 
-public interface DemoService {
+public interface IDemoService {
     String sayHello(String name);
 }
