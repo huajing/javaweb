@@ -19,5 +19,6 @@
         <module>spring-orm</module>
         <module>spring-templates</module>
         <module>spring-zuul</module>
+        <module>spring-aop</module>
     </modules>
 </project>
