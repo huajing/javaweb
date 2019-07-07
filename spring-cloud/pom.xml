@@ -18,5 +18,6 @@
         <module>spring-config</module>
         <module>spring-orm</module>
         <module>spring-templates</module>
+        <module>spring-zuul</module>
     </modules>
 </project>
