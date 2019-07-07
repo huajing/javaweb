@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>chen.ce.kuan</groupId>
-    <artifactId>thymeleaf</artifactId>
+    <artifactId>spring-templates-thymeleaf</artifactId>
 
     <dependencies>
         <dependency>
