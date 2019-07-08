@@ -22,5 +22,6 @@
         <module>spring-aop</module>
         <module>spring-starter-diy</module>
         <module>spring-shiro</module>
+        <module>spring-hystrix</module>
     </modules>
 </project>

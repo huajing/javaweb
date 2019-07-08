@@ -21,7 +21,7 @@ public class ProduceController {
     private DiscoveryClient discoveryClient;
 
     @RequestMapping(value = "/hello")
-    public String sayHello(){
+    public String sayHello() {
 
 //        ServiceInstance localServiceInstance = discoveryClient.getLocalServiceInstance();
 

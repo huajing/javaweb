@@ -1,7 +1,6 @@
 package c.c.k.service;
 
 import c.c.k.util.ProduceUtil;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,7 +16,7 @@ public class HelloService implements IHelloService{
     RestTemplate restTemplate;
 
     @Override
-    @HystrixCommand(fallbackMethod = "helloFallback")
+//    @HystrixCommand(fallbackMethod = "helloFallback")
     public String sayHell(String name) {
         return restTemplate.getForEntity(ProduceUtil.GET_SERVER() + "/hello", String.class).getBody();
     }
