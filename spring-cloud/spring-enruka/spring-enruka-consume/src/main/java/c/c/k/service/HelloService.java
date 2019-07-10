@@ -2,6 +2,7 @@ package c.c.k.service;
 
 import c.c.k.util.ProduceUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * @Description: java <br/>
  * @Created on 2019/7/6 chenck
  */
+@Service
 public class HelloService implements IHelloService{
 
     @Autowired

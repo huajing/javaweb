@@ -15,13 +15,8 @@ import org.springframework.web.client.RestTemplate;
  * @Description: java <br/>
  * @Created on 2019/6/19 chenck
  */
-//开启断路器
-//@EnableCircuitBreaker
-//@EnableDiscoveryClient
-//@SpringBootApplication
-
-//功能同上面3个注解
-@SpringCloudApplication
+@EnableDiscoveryClient
+@SpringBootApplication
 public class ConsumeApplication {
 
     @Bean

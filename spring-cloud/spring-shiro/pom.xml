@@ -11,6 +11,10 @@
 
     <groupId>chen.ce.kuan</groupId>
     <artifactId>spring-shiro</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-shiro-test</module>
+    </modules>
 
 
 </project>
