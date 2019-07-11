@@ -22,7 +22,6 @@ public class HomeController {
 
     @GetMapping(value = "consume-hello")
     public String helloConsume(){
-        helloService.sayHello();
-        return "123";
+        return helloService.sayHello();
     }
 }

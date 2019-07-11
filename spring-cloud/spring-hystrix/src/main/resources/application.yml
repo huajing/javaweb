@@ -1,5 +1,17 @@
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http
 
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    appname: eureka-server
+    hostname: peer1
+  server:
+    enable-self-preservation: false #关闭保护
+server:
+  port: 8081
+spring:
+  application:
+    name: spring-hystrix

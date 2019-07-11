@@ -1,13 +1,33 @@
 package c.c.k;
 
+import c.c.k.service.CustomRealm;
+import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.config.DefaultShiroFilterChainDefinition;
 import org.apache.shiro.spring.web.config.ShiroFilterChainDefinition;
+import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class ShiroApplication {
+    @Bean
+    public CustomRealm customRealm() {
+        CustomRealm realm = new CustomRealm();
+        return realm;
+    }
+
+    @Bean
+    public LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {
+        return new LifecycleBeanPostProcessor();
+    }
+
+    @Bean
+    public DefaultWebSecurityManager securityManager() {
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+        securityManager.setRealm(customRealm());
+        return securityManager;
+    }
 
     @Bean
     public ShiroFilterChainDefinition shiroFilterChainDefinition(){
