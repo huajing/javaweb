@@ -1,6 +1,8 @@
 package c.c.k.service;
 
 import c.c.k.pojo.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -8,8 +10,12 @@ import java.util.Random;
 
 @Service
 public class UserService {
+    private static final transient Logger logger = LoggerFactory.getLogger(UserService.class);
 
     public User findUserByName(String uname) {
+        logger.info("findUserByName");
+
+        System.out.println("findUserByName:" + uname);
         User user = new User();
         user.setUname(uname);
         user.setNick(uname+"NICK");

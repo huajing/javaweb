@@ -1,5 +1,7 @@
 package c.c.k.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -7,6 +9,8 @@ import java.util.Set;
 
 @Service
 public class PermService {
+    private static final transient Logger logger = LoggerFactory.getLogger(PermService.class);
+
     /**
      * 模拟根据用户id查询返回用户的所有权限，实际查询语句参考：
      * SELECT p.pval FROM perm p, role_perm rp, user_role ur
@@ -16,6 +20,8 @@ public class PermService {
      * @return
      */
     public Set<String> getPermsByUserId(Long uid){
+        logger.info("getPermsByUserId");
+
         Set<String> perms = new HashSet<>();
         //三种编程语言代表三种角色：js程序员、java程序员、c++程序员
         //js程序员的权限

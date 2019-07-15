@@ -10,11 +10,15 @@ import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CustomRealm extends AuthorizingRealm {
+    private static final transient Logger logger = LoggerFactory.getLogger(CustomRealm.class);
 
     @Autowired
     private UserService userService;
@@ -25,6 +29,7 @@ public class CustomRealm extends AuthorizingRealm {
 
     //告诉shiro如何根据获取到的用户信息中的密码和盐值来校验密码
     {
+        logger.info("static init hashMatcher...");
         //设置用于匹配密码的CredentialsMatcher
         HashedCredentialsMatcher hashMatcher = new HashedCredentialsMatcher();
         hashMatcher.setHashAlgorithmName(Sha256Hash.ALGORITHM_NAME);
@@ -37,6 +42,9 @@ public class CustomRealm extends AuthorizingRealm {
     //定义如何获取用户的角色和权限的逻辑，给shiro做权限判断
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
+        logger.info("doGetAuthorizationInfo");
+
+        System.out.println(principals);
         //null usernames are invalid
         if (principals == null) {
             throw new AuthorizationException("PrincipalCollection method argument cannot be null.");
@@ -55,6 +63,8 @@ public class CustomRealm extends AuthorizingRealm {
     //定义如何获取用户信息的业务逻辑，给shiro做登录
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+        logger.info("doGetAuthenticationInfo");
+
 
         UsernamePasswordToken upToken = (UsernamePasswordToken) token;
         String username = upToken.getUsername();

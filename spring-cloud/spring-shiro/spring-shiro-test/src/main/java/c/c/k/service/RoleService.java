@@ -1,5 +1,7 @@
 package c.c.k.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -7,6 +9,7 @@ import java.util.Set;
 
 @Service
 public class RoleService {
+    private static final transient Logger logger = LoggerFactory.getLogger(RoleService.class);
     /**
      * 模拟根据用户id查询返回用户的所有角色，实际查询语句参考：
      * SELECT r.rval FROM role r, user_role ur
@@ -15,6 +18,7 @@ public class RoleService {
      * @return
      */
     public Set<String> getRolesByUserId(Long uid){
+        logger.info("getRolesByUserId");
         Set<String> roles = new HashSet<>();
         //三种编程语言代表三种角色：js程序员、java程序员、c++程序员
         roles.add("js");
