@@ -1,2 +1,4 @@
 shiro:
   loginUrl: /login
+  unauthorizedUrl: /abc
+  successUrl: /success
