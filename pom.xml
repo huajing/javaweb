@@ -19,6 +19,7 @@
         <module>base-web-project</module>
         <module>spring-cloud</module>
         <module>spring</module>
+        <module>distributed</module>
     </modules>
 
 </project>
