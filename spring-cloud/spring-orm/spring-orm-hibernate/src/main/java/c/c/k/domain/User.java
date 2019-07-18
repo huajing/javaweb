@@ -25,4 +25,12 @@ public class User implements Serializable{
     public User(String name) {
         this.name = name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

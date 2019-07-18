@@ -1,5 +1,6 @@
 package c.c.k;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,5 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AopApplication {
     public static void main(String[] args) {
         SpringApplication.run(AopApplication.class, args);
+
     }
 }

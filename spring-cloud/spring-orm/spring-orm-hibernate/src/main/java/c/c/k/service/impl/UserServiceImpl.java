@@ -4,6 +4,7 @@ import c.c.k.domain.User;
 import c.c.k.repository.UserRepository;
 import c.c.k.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -19,8 +20,13 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void save(User user) {
+        //user.setId(35);
         userRepository.save(user);
+
+        //测试异常是否回滚
+        throw new RuntimeException("abc");
     }
 
     @Override
