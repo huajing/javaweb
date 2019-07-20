@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <artifactId>base-web-project</artifactId>
+    <artifactId>raw-project</artifactId>
 
     <modules>
         <module>j2ee</module>

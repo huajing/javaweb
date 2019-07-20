@@ -16,7 +16,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dubbo</module>
-        <module>base-web-project</module>
+        <module>raw-project</module>
         <module>spring-cloud</module>
         <module>spring</module>
         <module>database</module>
