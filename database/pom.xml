@@ -14,6 +14,7 @@
     <modules>
         <module>distributed-dtx</module>
         <module>distributed-id</module>
+        <module>distributed-sharding</module>
     </modules>
 
 
