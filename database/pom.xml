@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>distributed</artifactId>
+    <artifactId>database</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>distributed-dtx</module>
-        <module>distributed-id</module>
-        <module>distributed-sharding</module>
+        <module>database-dtx</module>
+        <module>database-id</module>
+        <module>database-sharding</module>
     </modules>
 
 
