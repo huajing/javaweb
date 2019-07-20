@@ -11,6 +11,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-config</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-config-server</module>
+        <module>spring-config-client</module>
+    </modules>
 
     <dependencies>
         <!--需要注意的是：之前我们一般都是用的各种starter，而这个config server不是spring-cloud-starter-config-server而是spring-cloud-config-server-->
