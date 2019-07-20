@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>distributed-dtx</module>
+        <module>distributed-id</module>
     </modules>
 
 
