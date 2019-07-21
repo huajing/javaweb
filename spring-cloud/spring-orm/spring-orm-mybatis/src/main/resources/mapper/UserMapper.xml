@@ -8,6 +8,11 @@
         <result column="name" property="name" />
     </resultMap>
 
+    <insert id="saveUser" parameterType="c.c.k.entity.User" >
+        insert into user(id,name)
+    values(#{id},#{name})
+    </insert>
+
     <parameterMap id="User" type="c.c.k.entity.User"/>
 
     <sql id="Base_Column_List">

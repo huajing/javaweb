@@ -1,9 +1,9 @@
 package c.c.k.dao;
 
 import c.c.k.entity.User;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Select;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import java.util.List;
 
 /**
  * @Title c.c.k.dao
@@ -11,7 +11,18 @@ import javax.xml.bind.annotation.XmlRegistry;
  * @Description: java <br/>
  * @Created on 2019/6/22 chenck
  */
-//@Repository
 public interface UserDao {
     User getUser();
+
+    void saveUser(User user);
+
+    /**
+     * 注解实现
+     * @param name
+     * @return
+     */
+    @Select("select id,name from user where name=#{name}")
+    List<User> findByName(String name);
+
+
 }

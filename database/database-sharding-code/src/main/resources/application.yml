@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: shard-jdbc-code
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/*.xml

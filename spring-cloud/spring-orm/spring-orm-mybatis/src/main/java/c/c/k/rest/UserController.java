@@ -2,6 +2,7 @@ package c.c.k.rest;
 
 import c.c.k.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,10 +20,24 @@ public class UserController {
     @Autowired
     private UserDao userDao;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
     public String getUser(){
         User user = userDao.getUser();
         System.out.println(user.getName());
         return user.toString();
+    }
+
+    @RequestMapping(value = "/insert", method = RequestMethod.GET)
+    public String insertUser(){
+        User user = new User();
+        user.setId(5);
+        user.setName("abc");
+        userDao.saveUser(user);
+        return "success";
+    }
+
+    @GetMapping("/find")
+    public String getByName(String name){
+        return userDao.findByName(name).toString();
     }
 }

@@ -12,9 +12,9 @@
     <artifactId>database</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>database-dtx</module>
         <module>database-id</module>
         <module>database-sharding</module>
+        <module>database-sharding-code</module>
     </modules>
 
 

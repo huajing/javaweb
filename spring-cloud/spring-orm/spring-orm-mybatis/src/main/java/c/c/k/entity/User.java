@@ -7,6 +7,14 @@ package c.c.k.entity;
  * @Created on 2019/6/22 chenck
  */
 public class User {
+    public User(String name){
+        this.name = name;
+    }
+
+    public User(){
+
+    }
+
     private int id;
 
     private String name;

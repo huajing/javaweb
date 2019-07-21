@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan(value = "c.c.k.mapper")
-public class ShardingApplication {
+public class ShardingCodeApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ShardingApplication.class, args);
+        SpringApplication.run(ShardingCodeApplication.class, args);
     }
 }
