@@ -6,16 +6,22 @@
 
 ## 项目介绍
 
+## raw-java
+写jdk中一些知识点
+
 ### raw-project
 基本的j2ee、springMVC、springboot项目
 
 ### spring-cloud
 spring-cloud的学习测试
 
+### spring
+spring的基础知识
+
 ### dubbo
 学习测试
 
-### distributed
+### database
 分布式相关，如id生成，事物
 
 ### doc

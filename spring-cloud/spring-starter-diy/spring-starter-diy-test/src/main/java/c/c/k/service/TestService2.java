@@ -1,7 +1,7 @@
 package c.c.k.service;
 
-import c.c.k.annotation.Test;
+import c.c.k.annotation.TestAnno;
 
-@Test
+@TestAnno
 public class TestService2 {
 }
