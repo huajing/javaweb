@@ -9,4 +9,8 @@ public class DiyStarterApplication {
     public static void main(String[] args) {
         SpringApplication.run(DiyStarterApplication.class, args);
     }
+
+    public void findTestAnnotation(){
+//        AnnotationUtils.findAnnotationDeclaringClass()
+    }
 }

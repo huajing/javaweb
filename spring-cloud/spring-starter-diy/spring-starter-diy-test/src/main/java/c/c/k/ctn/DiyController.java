@@ -1,7 +1,6 @@
 package c.c.k.ctn;
 
 import c.c.k.DiyService;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,4 +16,5 @@ public class DiyController {
     public String diyName(){
         return diyService.getName();
     }
+
 }
