@@ -23,5 +23,7 @@
         <module>spring-starter-diy</module>
         <module>spring-shiro</module>
         <module>spring-hystrix</module>
+        <module>spring-consul</module>
+        <module>spring-sleuth</module>
     </modules>
 </project>

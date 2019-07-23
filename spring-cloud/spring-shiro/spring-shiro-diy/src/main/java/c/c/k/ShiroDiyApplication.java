@@ -1,5 +1,6 @@
 package c.c.k;
 
+import c.c.k.annotation.MyPermission;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.io.Resource;
