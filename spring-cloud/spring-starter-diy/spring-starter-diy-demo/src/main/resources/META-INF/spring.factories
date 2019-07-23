@@ -1,2 +1,5 @@
+# SpringFactoriesLoader其主要功能就是从指定的配置文件META-INF/spring.factories加载配置
+# EnableAutoConfiguration
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 c.c.k.DiyAutoConfiguration
+

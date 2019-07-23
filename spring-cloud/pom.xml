@@ -25,5 +25,6 @@
         <module>spring-hystrix</module>
         <module>spring-consul</module>
         <module>spring-sleuth</module>
+        <module>spring-feign</module>
     </modules>
 </project>
