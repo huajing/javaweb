@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Description: java <br/>
  * @Created on 2019/7/18 chenck
  */
-@Component
+//@Component
 public class LoginFilter extends ZuulFilter {
     public LoginFilter(){
         System.out.println("init");

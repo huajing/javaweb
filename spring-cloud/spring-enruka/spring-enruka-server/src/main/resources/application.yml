@@ -9,3 +9,13 @@ eureka:
     hostname: peer1
   server:
     enable-self-preservation: false #关闭保护
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

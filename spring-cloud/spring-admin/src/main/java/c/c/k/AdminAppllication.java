@@ -1,16 +1,21 @@
 package c.c.k;
 
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
+/**
+ * @Title c.c.k
+ * @Copyright: Copyright 2019
+ * @Description: java <br/>
+ * @Created on 2019/7/28 chenck
+ */
 @SpringBootApplication
-@EnableZuulProxy
 @EnableDiscoveryClient
-public class ZuulApplication {
+@EnableAdminServer
+public class AdminAppllication {
     public static void main(String[] args) {
-
-        SpringApplication.run(ZuulApplication.class, args);
+        SpringApplication.run(AdminAppllication.class, args);
     }
 }
