@@ -26,6 +26,5 @@
         <module>spring-consul</module>
         <module>spring-sleuth</module>
         <module>spring-feign</module>
-        <module>spring-admin</module>
     </modules>
 </project>
