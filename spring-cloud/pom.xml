@@ -29,5 +29,6 @@
         <module>spring-admin</module>
         <module>spring-actuator</module>
         <module>spring-security</module>
+        <module>spring-ribbon</module>
     </modules>
 </project>
