@@ -27,5 +27,6 @@
         <module>spring-sleuth</module>
         <module>spring-feign</module>
         <module>spring-admin</module>
+        <module>spring-actuator</module>
     </modules>
 </project>
