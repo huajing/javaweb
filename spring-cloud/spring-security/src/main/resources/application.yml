@@ -1,0 +1,13 @@
+spring:
+  security:
+    user:
+      name: huajing
+      password: 123456
+management:
+  endpoint:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
