@@ -23,7 +23,7 @@ public class ProduceController {
     @RequestMapping(value = "/hello")
     public String sayHello() {
 
-//        ServiceInstance localServiceInstance = discoveryClient.getLocalServiceInstance();
+        System.out.println(discoveryClient.getServices());
 
 //        discoveryClient.getServices()
         return "Produce-hello";
