@@ -28,5 +28,6 @@
         <module>spring-feign</module>
         <module>spring-admin</module>
         <module>spring-actuator</module>
+        <module>spring-security</module>
     </modules>
 </project>
