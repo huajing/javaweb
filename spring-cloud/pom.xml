@@ -30,5 +30,7 @@
         <module>spring-actuator</module>
         <module>spring-security</module>
         <module>spring-ribbon</module>
+        <module>spring-gateway</module>
+        <module>spring-acm</module>
     </modules>
 </project>
