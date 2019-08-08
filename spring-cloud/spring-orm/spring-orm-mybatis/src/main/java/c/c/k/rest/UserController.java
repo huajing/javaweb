@@ -2,6 +2,7 @@ package c.c.k.rest;
 
 import c.c.k.entity.User;
 import c.c.k.mapper.UserMapper;
+import c.c.k.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import c.c.k.dao.UserDao;
+
+import javax.annotation.Resource;
 
 /**
  * @Title c.c.k.rest
@@ -23,6 +26,9 @@ public class UserController {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Resource
+    private UserService userService;
 
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     public String getUser(){
@@ -47,11 +53,12 @@ public class UserController {
 
     @GetMapping("test_mp")
     public String getMp(){
-        for (int i = 0; i < 1000000; i++) {
-            User user = new User();
-            user.setName("name" + i);
-            userMapper.insert(user);
-        }
+//        for (int i = 0; i < 1000000; i++) {
+//            User user = new User();
+//            user.setName("name" + i);
+//            userMapper.insert(user);
+//        }
+        userService.insert();
 
         return "ok";
     }

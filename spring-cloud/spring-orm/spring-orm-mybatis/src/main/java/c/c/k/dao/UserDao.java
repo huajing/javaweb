@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 /**
+ * mybatics
  * @Title c.c.k.dao
  * @Copyright: Copyright 2019
  * @Description: java <br/>
