@@ -47,9 +47,12 @@ public class UserController {
 
     @GetMapping("test_mp")
     public String getMp(){
-        User user = new User();
-        user.setName("-------------");
-        userMapper.insert(user);
+        for (int i = 0; i < 1000000; i++) {
+            User user = new User();
+            user.setName("name" + i);
+            userMapper.insert(user);
+        }
+
         return "ok";
     }
 }
