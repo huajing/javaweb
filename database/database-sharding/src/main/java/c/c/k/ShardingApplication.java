@@ -1,5 +1,6 @@
 package c.c.k;
 
+import io.shardingsphere.shardingjdbc.api.ShardingDataSourceFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

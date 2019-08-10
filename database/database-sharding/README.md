@@ -1,3 +1,6 @@
+## 说明
+主要是通过配置实现分库分表
+
 ## 文档
 https://shardingsphere.apache.org/document/current/cn/overview/
 
