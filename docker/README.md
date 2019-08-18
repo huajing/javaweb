@@ -9,4 +9,6 @@ https://www.cnblogs.com/Tempted/p/7768694.html
 1. 修改start.cmd开放的端口，容器端口与本机的端口映射
 1. 运行start.cmd，看效果
 
+docker build -t spring-enruka-server:v1.0 .
+
 ## 二、pom.xml镜像
