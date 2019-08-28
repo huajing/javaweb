@@ -18,19 +18,18 @@
         <module>spring-config</module>
         <module>spring-orm</module>
         <module>spring-templates</module>
-        <module>spring-zuul</module>
+
         <module>spring-aop</module>
         <module>spring-starter-diy</module>
         <module>spring-shiro</module>
         <module>spring-hystrix</module>
         <module>spring-consul</module>
-        <module>spring-sleuth</module>
         <module>spring-feign</module>
-        <module>spring-admin</module>
-        <module>spring-actuator</module>
         <module>spring-security</module>
         <module>spring-ribbon</module>
-        <module>spring-gateway</module>
-        <module>spring-session</module>
+
+        <module>spring-sso</module>
+        <module>spring-tool</module>
+        <module>spring-gate</module>
     </modules>
 </project>

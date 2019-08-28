@@ -8,14 +8,13 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <artifactId>spring-tool</artifactId>
 
-    <artifactId>spring-gateway</artifactId>
+    <modules>
+        <module>spring-actuator</module>
+        <module>spring-admin</module>
+        <module>spring-sleuth</module>
+    </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-            <version>2.0.1.RELEASE</version>
-        </dependency>
-    </dependencies>
 </project>

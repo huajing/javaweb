@@ -9,12 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>chen.ce.kuan</groupId>
-    <artifactId>spring-sleuth</artifactId>
+    <artifactId>spring-sso</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-sleuth-servicehi</module>
-        <module>spring-sleuth-yeluo</module>
+        <module>spring-session</module>
+        <module>spring-jwt</module>
     </modules>
 
 
