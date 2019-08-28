@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsumeController {
     @Autowired
     private IHelloService helloService;
-    @Bean
 
 
     @RequestMapping(value = "consume-hello", method = RequestMethod.GET)

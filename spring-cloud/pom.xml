@@ -31,5 +31,6 @@
         <module>spring-security</module>
         <module>spring-ribbon</module>
         <module>spring-gateway</module>
+        <module>spring-session</module>
     </modules>
 </project>
