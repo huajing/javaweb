@@ -1,5 +1,6 @@
 package c.c.k;
 
+import c.c.k.util.Constants;
 import c.c.k.util.JwtUtil;
 import io.jsonwebtoken.Jwts;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +24,12 @@ public class WebConfigurer implements WebMvcConfigurer {
         registry.addInterceptor(new HandlerInterceptor() {
             @Override
             public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-                String token = request.getHeader("token");
+                //从请求中获取
+//                String token = request.getHeader("token");
+
+                String token = "eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAACWMwQrDIBBE_2XPETRxjeZbctHVUAuxpauQUvrvVXqcN2_mA_eaYYPDB5dwVoJoQaHXiCLowwpPRkerrUJCmCD7CptCY-U6O2Um4Bb6mt9c0zl65hFvqZTcpFw68i12RI3rYxjpev4fFLplPDROr-LP1KUdfKAd4PsDtZlLCZYAAAA.5GrFqizGmmUCOAuenPojd0DD8DOpv83sAgWQGAKK_Gw";
+                Object username = JwtUtil.getVal(token, Constants.ENCRY_KEY, "username");
+                request.setAttribute("username", username);
 
 
                 return false;
