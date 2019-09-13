@@ -14,13 +14,14 @@ public class TestController {
     @GetMapping("/api/test")
     public String apiTest(HttpServletRequest request){
 //        String token = request.getHeader("token");
-        String token = "eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAACWMwQrDIBBE_2XPETRxjeZbctHVUAuxpauQUvrvVXqcN2_mA_eaYYPDB5dwVoJoQaHXiCLowwpPRkerrUJCmCD7CptCY-U6O2Um4Bb6mt9c0zl65hFvqZTcpFw68i12RI3rYxjpev4fFLplPDROr-LP1KUdfKAd4PsDtZlLCZYAAAA.5GrFqizGmmUCOAuenPojd0DD8DOpv83sAgWQGAKK_Gw";
 
-
-        System.out.println(JwtUtil.getVal(token, Constants.ENCRY_KEY, "username"));
         return "ok";
     }
 
+    /**
+     * 登录后返回生成的jwt值，存储在客户端，下次请求时带上信息
+     * @return
+     */
     @GetMapping("/login")
     public String login(){
         Map<String, Object> map = new HashMap<>();
