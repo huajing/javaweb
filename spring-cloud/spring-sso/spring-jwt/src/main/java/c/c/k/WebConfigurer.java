@@ -24,7 +24,8 @@ public class WebConfigurer implements WebMvcConfigurer {
             @Override
             public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
                 String token = request.getHeader("token");
-
+                //通过token获取用户
+                //set 用户到request中，供controller使用
 
                 return false;
             }
