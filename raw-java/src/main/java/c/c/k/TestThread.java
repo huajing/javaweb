@@ -25,14 +25,7 @@ public class TestThread {
 //            System.out.println(count);
 //        }
 
-//        for (int j = 0; j < 10; j++) {
-////            List<Integer> list = new ArrayList<>(100000000);
-////            long start = System.currentTimeMillis();
-////            for (int i = 0; i < 100000000; i++) {
-////                list.add(1);
-////            }
-////            System.out.println(System.currentTimeMillis()-start);
-////        }
+
         System.out.println(1<<30);
     }
 }
