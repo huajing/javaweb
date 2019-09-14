@@ -12,10 +12,6 @@
     <artifactId>database-txlcn-tm</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.codingapi.txlcn</groupId>
             <artifactId>txlcn-tm</artifactId>
             <version>5.0.2.RELEASE</version>

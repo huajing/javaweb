@@ -17,9 +17,9 @@
 
     <modules>
         <module>dubbo</module>
-        <module>raw-project</module>
+        <module>raw-web</module>
         <module>spring-cloud</module>
-        <module>spring</module>
+        <module>raw-spring</module>
         <module>database</module>
         <module>raw-java</module>
     </modules>

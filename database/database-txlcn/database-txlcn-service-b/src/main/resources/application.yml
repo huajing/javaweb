@@ -1,0 +1,4 @@
+tx-lcn:
+  client:
+    # 默认之配置为TM的本机默认端口
+    manager-address: 127.0.0.1:8070
