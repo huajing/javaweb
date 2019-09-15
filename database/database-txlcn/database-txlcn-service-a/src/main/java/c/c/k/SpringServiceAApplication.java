@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 //@EnableDistributedTransaction
-//@MapperScan("c.c.k")
+@MapperScan("c.c.k")
 public class SpringServiceAApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootApplication.class, args);

@@ -8,7 +8,7 @@
         <result column="name" property="name" />
     </resultMap>
 
-    <insert id="saveUser" parameterType="c.c.k.entity.User" >
+    <!--<insert id="saveUser" parameterType="c.c.k.entity.User" >
         insert into user(id,name)
     values(#{id},#{name})
     </insert>
@@ -23,5 +23,5 @@
         select
         id, name
         from user where id=1
-    </select>
+    </select>-->
 </mapper>

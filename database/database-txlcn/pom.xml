@@ -9,14 +9,47 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>database-tx</artifactId>
+    <artifactId>database-txlcn</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>database-txlcn-tm</module>
         <module>database-txlcn-service-a</module>
         <module>database-txlcn-service-b</module>
         <module>database-txlcn-service-c</module>
+
+        <module>txlcn-user</module>
+        <module>txlcn-money</module>
+        <module>txlcn-order</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- <dependency>
+             <groupId>com.codingapi.txlcn</groupId>
+             <artifactId>txlcn-tc</artifactId>
+             <version>5.0.2.RELEASE</version>
+         </dependency>
+
+         <dependency>
+             <groupId>com.codingapi.txlcn</groupId>
+             <artifactId>txlcn-txmsg-netty</artifactId>
+             <version>5.0.2.RELEASE</version>
+         </dependency>-->
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.0.7.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
