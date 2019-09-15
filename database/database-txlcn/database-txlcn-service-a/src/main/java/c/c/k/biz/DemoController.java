@@ -1,4 +1,4 @@
-package c.c.k;
+package c.c.k.biz;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,12 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
-    private final DemoService demoService;
-
     @Autowired
-    public DemoController(DemoService demoService) {
-        this.demoService = demoService;
-    }
+    UserMapper userMapper;
+
 
     @RequestMapping("/txlcn")
     public String execute(
@@ -20,5 +17,10 @@ public class DemoController {
             @RequestParam(value = "ex", required = false) String exFlag) {
         return "";
 //        return demoService.execute(value, exFlag);
+    }
+
+    public String getUser(){
+        userMapper.insert(new User("abc"));
+        return "";
     }
 }
