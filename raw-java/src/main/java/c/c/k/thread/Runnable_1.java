@@ -18,5 +18,7 @@ public class Runnable_1 {
         new Thread(new MyRunnable()).start();
         new Thread(new MyRunnable()).start();
         new Thread(new MyRunnable()).start();
+
+        new Thread(()->{});
     }
 }
