@@ -12,10 +12,6 @@
     <artifactId>database-txlcn</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>database-txlcn-tm</module>
-        <module>txlcn-user</module>
-        <module>txlcn-money</module>
-        <module>txlcn-order</module>
     </modules>
 
     <dependencies>
