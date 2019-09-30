@@ -2,25 +2,24 @@ package c.c.k.biz;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 
-@TableName(value = "user")
-public class User {
-    public User(String name){
+public class Order {
+    public Order(String name){
         this.name = name;
     }
 
-    public User(){
+    public Order(){
 
     }
 
-    private Long id;
+    private Integer id;
 
     private String name;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

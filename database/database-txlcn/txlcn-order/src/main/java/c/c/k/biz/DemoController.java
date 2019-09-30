@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 //    @Autowired
-//    UserMapper userMapper;
+//    OrderMapper userMapper;
 
 
     @RequestMapping("/txlcn")
@@ -19,7 +19,7 @@ public class DemoController {
     }
 
     public String getUser(){
-//        userMapper.insert(new User("abc"));
+//        userMapper.insert(new Order("abc"));
         return "";
     }
 }
