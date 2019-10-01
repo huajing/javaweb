@@ -32,5 +32,6 @@
         <module>spring-tool</module>
         <module>spring-gate</module>
         <module>spring-cache</module>
+        <module>spring-profile</module>
     </modules>
 </project>
