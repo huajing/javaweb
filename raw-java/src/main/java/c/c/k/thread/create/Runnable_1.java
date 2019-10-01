@@ -1,4 +1,4 @@
-package c.c.k.thread;
+package c.c.k.thread.create;
 
 import org.junit.Test;
 

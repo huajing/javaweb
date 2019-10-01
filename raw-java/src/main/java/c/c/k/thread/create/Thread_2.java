@@ -1,4 +1,4 @@
-package c.c.k.thread;
+package c.c.k.thread.create;
 
 import org.junit.Test;
 
@@ -6,6 +6,7 @@ import org.junit.Test;
  *
  */
 public class Thread_2 {
+    
     class MyThread extends Thread{
         @Override
         public void run() {
