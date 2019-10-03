@@ -18,15 +18,15 @@ public class TotalTaskLimitCtn {
     @GetMapping("/testTotal")
     public String testTotal(HttpServletResponse response){
         int andIncrement = atomicInteger.getAndIncrement();
-        if(andIncrement>10){
-            response.setStatus(HttpStatus.SC_INTERNAL_SERVER_ERROR);
-        }else {
+        if(andIncrement < 10){
             try {
                 //执行业务逻辑
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        }else {
+            response.setStatus(HttpStatus.SC_INTERNAL_SERVER_ERROR);
         }
 
         atomicInteger.decrementAndGet();

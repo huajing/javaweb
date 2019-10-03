@@ -21,15 +21,15 @@ public class RateLimiterCtn {
     private RateLimiter rateLimiter = RateLimiter.create(1);
     @GetMapping("/testRate")
     public String test(HttpServletResponse response){
-        if(!rateLimiter.tryAcquire()){
-            response.setStatus(HttpStatus.SC_BAD_REQUEST);
-        }else {
+        if(rateLimiter.tryAcquire()){
             try {
                 //执行业务逻辑
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        }else {
+            response.setStatus(HttpStatus.SC_BAD_REQUEST);
         }
 
         return "test";
