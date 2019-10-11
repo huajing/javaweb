@@ -3,7 +3,7 @@ package c.c.k.thread.concurrent;
 /**
  * 2个线程交替打印
  */
-public class PrintThree {
+public class PrintThree_1 {
     private static Object lock = new Object();
     private static volatile int idx = 0;
 
