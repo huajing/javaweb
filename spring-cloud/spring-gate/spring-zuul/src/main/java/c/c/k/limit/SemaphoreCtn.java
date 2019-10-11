@@ -9,7 +9,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- *
+ * 信号量
  */
 @RestController
 public class SemaphoreCtn {

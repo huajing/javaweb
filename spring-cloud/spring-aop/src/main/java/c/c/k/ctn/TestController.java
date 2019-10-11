@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Random;
+import java.util.function.IntConsumer;
+import java.util.stream.IntStream;
 
 @RestController
 public class TestController {
@@ -15,6 +17,7 @@ public class TestController {
         if(new Random(System.currentTimeMillis()).nextBoolean()){
             response.setStatus(500);
         }
+        IntStream.range(1, 1<<30).sum();
         return "abc";
     }
 }

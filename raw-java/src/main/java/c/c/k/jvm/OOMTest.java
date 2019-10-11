@@ -12,7 +12,7 @@ import java.util.List;
  * -XX:+PrintGCDetails
  * -XX:+PrintGCDateStamps
  * -XX:+PrintHeapAtGC
- * -Xloggc:./gclogs
+ * -Xloggc:./gclogs (日志的路径为当前项目的根路径)
  */
 public class OOMTest {
     static List<Object> list = new ArrayList<>();

@@ -8,12 +8,15 @@ import javax.servlet.AsyncContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * 测试异步
  */
 @RestController
 public class AsyncContextController {
+    private static final ExecutorService executorService = Executors.newCachedThreadPool();
     @RequestMapping(value = "/async_test")
     public void test(HttpServletRequest request, HttpServletResponse response){
         try {

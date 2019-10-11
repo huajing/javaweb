@@ -4,7 +4,7 @@ import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 
 public class MyHystrixCommand extends HystrixCommand<String> {
-    static int idx;
+    static volatile int idx;
     public MyHystrixCommand(){
         super(HystrixCommandGroupKey.Factory.asKey("name1"));
     }
