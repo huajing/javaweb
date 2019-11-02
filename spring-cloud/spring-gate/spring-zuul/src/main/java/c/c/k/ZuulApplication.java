@@ -16,16 +16,16 @@ import org.springframework.web.client.RestTemplate;
 public class ZuulApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(ZuulApplication.class, args);
     }
 
     @Bean
     @LoadBalanced
     RestTemplate restTemplate(){
-        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-        factory.setReadTimeout(5000);
-        factory.setConnectTimeout(5000);
-        return new RestTemplate(factory);
+//        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+//        factory.setReadTimeout(5000);
+//        factory.setConnectTimeout(5000);
+//        return new RestTemplate(factory);
+        return new RestTemplate();
     }
 }

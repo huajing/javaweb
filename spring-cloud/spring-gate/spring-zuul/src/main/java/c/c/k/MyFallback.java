@@ -1,14 +1,18 @@
 package c.c.k;
 
+import com.netflix.hystrix.exception.HystrixTimeoutException;
 import com.netflix.zuul.ZuulFilter;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 
 /**
  * zuul的全局回退，可实现按服务的histrix
@@ -17,25 +21,35 @@ import java.io.InputStream;
 public class MyFallback implements FallbackProvider {
     @Override
     public String getRoute() {
-        return null;
+        System.out.println("getRoute===============");
+        return "*"; //全部服务启动fallback
     }
 
     @Override
     public ClientHttpResponse fallbackResponse(String route, Throwable cause) {
+        if(cause instanceof HystrixTimeoutException){
+            return response(HttpStatus.GATEWAY_TIMEOUT);
+        }else {
+            //后台错误
+            return response(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    private ClientHttpResponse response(final HttpStatus status){
         return new ClientHttpResponse() {
             @Override
             public HttpStatus getStatusCode() throws IOException {
-                return null;
+                return status;
             }
 
             @Override
             public int getRawStatusCode() throws IOException {
-                return 0;
+                return status.value();
             }
 
             @Override
             public String getStatusText() throws IOException {
-                return null;
+                return status.getReasonPhrase();
             }
 
             @Override
@@ -45,12 +59,16 @@ public class MyFallback implements FallbackProvider {
 
             @Override
             public InputStream getBody() throws IOException {
-                return null;
+
+                return new ByteArrayInputStream(("{\"msg\":\"服务不可用" + this.getRawStatusCode()+this.getStatusText() + "，请一会再来\"}").getBytes());
             }
 
             @Override
             public HttpHeaders getHeaders() {
-                return null;
+                HttpHeaders headers = new HttpHeaders();
+                MediaType mediaType = new MediaType("application", "json", Charset.forName("UTF-8"));
+                headers.setContentType(mediaType);
+                return headers;
             }
         };
     }
