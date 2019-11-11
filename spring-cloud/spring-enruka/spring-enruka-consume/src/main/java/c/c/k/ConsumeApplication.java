@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-@RibbonClient(name = "produce-service", configuration = MyRuleConfig.class)
+//@RibbonClient(name = "produce-service", configuration = MyRuleConfig.class)
 public class ConsumeApplication {
 
     @Bean
