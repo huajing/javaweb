@@ -24,4 +24,9 @@ public class ConsumeController {
     public String helloConsume(){
         return helloService.sayHell("consume-hello");
     }
+
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(){
+        return "home";
+    }
 }
