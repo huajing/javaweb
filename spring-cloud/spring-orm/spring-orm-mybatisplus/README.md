@@ -33,7 +33,7 @@
     @Mapper
     public interface UserMapper extends BaseMapper<User> {
     }
-
+注意：不在启动类加MapperScan，则需要每个mapper上加@Mapper
 ## 5、server调用dao
     @Service
     public class UserService implements IUservice{

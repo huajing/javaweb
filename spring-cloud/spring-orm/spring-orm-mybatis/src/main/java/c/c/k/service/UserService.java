@@ -1,7 +1,7 @@
 package c.c.k.service;
 
+import c.c.k.dao.UserDao;
 import c.c.k.entity.User;
-import c.c.k.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -15,11 +15,10 @@ import org.springframework.transaction.annotation.Transactional;
         readOnly = false)
 public class UserService {
     @Autowired
-    private UserMapper userMapper;
+    private UserDao userDao;
 
     public void insert(){
-        userMapper.insert(new User("aaaa"));
-        userMapper.insert(new User("aaaa"));
+        userDao.saveUser(new User("abc"));
         throw new RuntimeException("111");
     }
 }

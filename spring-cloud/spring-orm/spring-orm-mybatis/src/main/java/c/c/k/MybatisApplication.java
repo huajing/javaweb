@@ -11,10 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Created on 2019/6/22 chenck
  */
 @SpringBootApplication
-@MapperScan("c.c.k")//注解只会扫描包中的接口，不会扫描类
+@MapperScan("c.c.k")
 public class MybatisApplication {
     public static void main(String[] args) {
         SpringApplication.run(MybatisApplication.class, args);
-
     }
 }

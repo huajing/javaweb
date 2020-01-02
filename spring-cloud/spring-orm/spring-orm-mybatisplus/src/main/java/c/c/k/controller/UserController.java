@@ -1,6 +1,7 @@
 package c.c.k.controller;
 
 import c.c.k.service.IUservice;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

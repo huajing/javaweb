@@ -1,7 +1,6 @@
 package c.c.k.rest;
 
 import c.c.k.entity.User;
-import c.c.k.mapper.UserMapper;
 import c.c.k.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,9 +22,6 @@ import javax.annotation.Resource;
 public class UserController {
     @Autowired
     private UserDao userDao;
-
-    @Autowired
-    private UserMapper userMapper;
 
     @Resource
     private UserService userService;

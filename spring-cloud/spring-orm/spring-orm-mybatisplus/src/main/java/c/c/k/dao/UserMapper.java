@@ -10,6 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @Description: java <br/>
  * @Created on 2020/1/2 chenck
  */
-@Mapper
+//@Mapper //也可以在启动类上加@MapperScan指定包，不用在每个Mapper上加注解
 public interface UserMapper extends BaseMapper<User> {
 }
