@@ -1,2 +1,9 @@
 server:
   port: 8080
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: nacos-zuul #不指定无法注册到nacos上
