@@ -10,6 +10,12 @@ public class MyXmlPathSpringContext extends MySpringContext {
 
     @Override
     protected void initBeans() {
-        super.initBeans();
+        try {
+            super.initBeans();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
     }
 }
