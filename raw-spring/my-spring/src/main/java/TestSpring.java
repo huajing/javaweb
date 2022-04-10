@@ -1,20 +1,27 @@
-import c.c.k.MyBean;
-import c.c.k.controller.MyController;
-import c.c.k.service.MyBeanService;
-import c.c.k.service.impl.MyBeanServiceImpl;
+import c.c.k.service.MyService;
+import c.c.k.service.impl.MyServiceImpl;
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
 import spring.MyAnnatationSpringContext;
+import spring.MyMethodInterceptor;
 import spring.MySpringContext;
-
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import util.CglibUtil;
 
 //@MyPagecageScan(value = "")
 public class TestSpring {
     public static void main(String[] args) {
         MySpringContext context = new MyAnnatationSpringContext("c.c.k");
 
+        /*MyService bean = (MyService)context.getBean(MyServiceImpl.class);
+        bean.test();*/
+
+
+        MyServiceImpl service = (MyServiceImpl)CglibUtil.getObject(MyServiceImpl.class);
+        service.test();
+
+
         /*MyBean bean3 = (MyBean)context.getBean(MyBean.class);
-        bean3.print();*/
+        bean3.print();
 
         MyController bean = (MyController)context.getBean(MyController.class);
         bean.print();
@@ -22,10 +29,7 @@ public class TestSpring {
         MyBeanService bean1 = (MyBeanService)context.getBean(MyBeanService.class);
         bean1.print();
 
-        /*MyBeanServiceImpl bean2 = (MyBeanServiceImpl)context.getBean(MyBeanServiceImpl.class);
+        MyBeanServiceImpl bean2 = (MyBeanServiceImpl)context.getBean(MyBeanServiceImpl.class);
         bean2.print();*/
-
-        Future<?> submit = Executors.newCachedThreadPool().submit(() -> {
-        });
     }
 }

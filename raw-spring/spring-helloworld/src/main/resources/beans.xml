@@ -9,4 +9,11 @@
         <property name="message" value="Hello World!"/>
     </bean>
 
+    <bean id="helloworld2" class="c.c.k.HelloWorld2">
+        <property name="message" value="Hello World!"/>
+    </bean>
+
+    <bean id="myBeanPostProcessor" class="c.c.k.MyBeanPostProcessor"></bean>
+    <bean id="myBeanFactoryPostProcessor" class="c.c.k.MyBeanFactoryPostProcessor"></bean>
+
 </beans>

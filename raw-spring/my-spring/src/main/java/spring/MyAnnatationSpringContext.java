@@ -24,6 +24,8 @@ public class MyAnnatationSpringContext extends MySpringContext {
 
     private void refresh(){
         try {
+
+
             //加载bean的定义
             this.initBeanDefinition();
             //初始化bean
@@ -31,9 +33,13 @@ public class MyAnnatationSpringContext extends MySpringContext {
             //依赖注入
             this.autoware();
 
+            this.postBeanProcessor();
+
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (BeansException e) {
             e.printStackTrace();
         }
     }
@@ -94,6 +100,23 @@ public class MyAnnatationSpringContext extends MySpringContext {
                         df.setScope(annotation.value());
                     }
                     beanDefinitionMap.put(aClass.getName(), df);
+                }
+            }
+        }
+    }
+
+    private void postBeanProcessor() throws BeansException {
+        Set<String> keySet = beanMap.keySet();
+        for (String key : keySet) {
+            Object o = beanMap.get(key);
+            for (MyBeanPostProcessor postProcessor : beanPostProcessorList) {
+                Object oBefore = postProcessor.postProcessBeforeInitialization(o, key);
+                if(oBefore != null){
+                    beanMap.put(key, oBefore);
+                }
+                Object oAfter = postProcessor.postProcessAfterInitialization(o, key);
+                if(oAfter != null){
+                    beanMap.put(key, oAfter);
                 }
             }
         }

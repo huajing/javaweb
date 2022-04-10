@@ -3,7 +3,7 @@ package c.c.k;
 import org.springframework.stereotype.Service;
 
 @Service
-public class HelloWorld {
+public class HelloWorld2 {
 
     private String message;
 
