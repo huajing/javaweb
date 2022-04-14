@@ -22,6 +22,7 @@
         <module>raw-spring</module>
         <module>database</module>
         <module>raw-java</module>
+        <module>mybatis</module>
     </modules>
 
 </project>

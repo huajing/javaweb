@@ -12,6 +12,8 @@ import java.util.Arrays;
  * @Author chenck
  * @Date 2022/4/10 18:25
  * @Version 1.0
+ *
+ * cglib 代理
  **/
 
 public class MyMethodInterceptor implements MethodInterceptor {
