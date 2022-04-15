@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>raw-java</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>my-mybatis</module>
+    </modules>
 
     <dependencies>
         <dependency>
