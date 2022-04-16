@@ -18,17 +18,11 @@ import java.lang.reflect.Proxy;
 
 @Service
 public class UserServiceImpl implements UserService {
+    /**
+     *  怎么注入mapper，参看MyMapperScannerRegistrar
+     */
     @Autowired
-    private JdbcTemplate jdbcTemplate;
-
     private UserMapper userMapper;
-
-    public UserServiceImpl(){
-        userMapper = (UserMapper)Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), new Class[]{UserMapper.class},
-                MyMapperProxyFactory.getFactory().getMapper(UserMapper.class, jdbcTemplate)
-                );
-    }
-
 
     @Override
     public void test() {

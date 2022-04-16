@@ -1,4 +1,4 @@
-package c.c.k.mybatis;
+package c.c.k.enums;
 
 /**
  * @Description TODO

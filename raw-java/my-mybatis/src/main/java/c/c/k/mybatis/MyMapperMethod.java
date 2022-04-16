@@ -10,7 +10,15 @@ import org.springframework.jdbc.core.JdbcTemplate;
  **/
 
 public class MyMapperMethod {
-    public Object execute(JdbcTemplate jdbcTemplate){
+    private final MySqlCommand command;
+    private final MyMethodSignature method;
+
+    public MyMapperMethod(){
+        this.command = new MySqlCommand();
+        this.method = new MyMethodSignature();
+    }
+
+    public Object execute(JdbcTemplate jdbcTemplate, Object[] args){
         return null;
 
     }

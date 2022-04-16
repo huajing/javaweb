@@ -1,5 +1,7 @@
 package c.c.k.mybatis;
 
+import c.c.k.enums.MySqlCommandType;
+
 /**
  * @Description TODO
  * @Author chenck
