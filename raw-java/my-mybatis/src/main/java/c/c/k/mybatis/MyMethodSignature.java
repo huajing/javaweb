@@ -1,5 +1,9 @@
 package c.c.k.mybatis;
 
+import java.lang.reflect.Method;
+import java.util.Collection;
+import java.util.Collections;
+
 /**
  * @Description TODO
  * @Author chenck
@@ -8,4 +12,14 @@ package c.c.k.mybatis;
  **/
 
 public class MyMethodSignature {
+    private boolean returnMany;
+
+    public MyMethodSignature(Class mapperInterface, Method method){
+        Class<?> returnType = method.getReturnType();
+        returnMany = Collection.class.isAssignableFrom(returnType) || returnType.isArray();
+    }
+
+    public boolean isReturnMany() {
+        return returnMany;
+    }
 }

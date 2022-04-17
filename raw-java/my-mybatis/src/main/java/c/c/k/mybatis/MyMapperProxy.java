@@ -30,8 +30,7 @@ import java.util.Map;
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        //MyMapperMethod myMapperMethod = methodCache.get(method);
-       //return myMapperMethod.execute(jdbcTemplate, args);
-        return null;
+        MyMapperMethod mapperMethod = new MyMapperMethod();
+       return mapperMethod.execute(jdbcTemplate, args);
     }
 }
