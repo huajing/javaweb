@@ -6,12 +6,17 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
+/**
+ * 利用AQS实现自增
+ * AQS的核心CAS(compareAndSetState)+自旋
+ */
 public class MyAqs extends AbstractQueuedSynchronizer {
     public MyAqs(){
         this.setState(0);
     }
     public void inc(){
         boolean b = false;
+        //AQS的核心CAS(compareAndSetState)+自旋
         do {
             int state = this.getState();
             b = this.compareAndSetState(state, 1 + state);
