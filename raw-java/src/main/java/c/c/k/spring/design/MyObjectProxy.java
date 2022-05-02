@@ -5,8 +5,9 @@ package c.c.k.spring.design;
  * @Author chenck
  * @Date 2022/5/2 16:11
  * @Version 1.0
- * 代理模式代理类: 目的是增加代理对象，或者做AOP
- * 在spring中主要使用jdk的动态代理（有接口）或者CGLIB代理（无接口时）
+ * 静态代理模式代理类: 目的是增加代理对象，或者做AOP
+ * 在spring中主要使用jdk的动态代理（有接口）或者CGLIB动态代理（无接口时）
+ * 动态代理：在内存中构建的，不需要手动编写代理类
  **/
 
 public class MyObjectProxy {
