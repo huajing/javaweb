@@ -23,6 +23,7 @@
         <module>database</module>
         <module>raw-java</module>
         <module>mybatis</module>
+        <module>mock-test</module>
     </modules>
 
 </project>
